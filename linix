@@ -1,0 +1,32 @@
+* to install any thing on linix ubunto
+1- you can install it via termial ..... sudo apt install <>
+2- you can download file.dep and then right click on it  and the open with software downlad
+or you can open terminal and put  sudo apt install ./filename.dep
+
+
+// install last version of node
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_17.x | sudo -E bash -
+sudo apt-get install -y nodejs  
+
+// install monogodb
+ 1- sudo apt update
+ 2-sudo apt upgrade
+ 3-sudo apt install mongodb
+ 4-sudo systemctl status mongodb  (to check the status of database)
+5-sudo systemctl start mongodb 
+6-sudo systemctl stop mongodb 
+7-sudo systemctl restart mongodb
+8-sudo systemctl enable mongodb
+9-sudo systemctl disable mongodb
+10- sudo mongo  (start mongodb shell)
+
+unistall mongodb
+1-sudo systemctl stop mongodb
+2-sudo apt purge mongodb
+3-sudo apt purge mongodb
+4-sudo apt autoremove
+
+ 
+
+  
