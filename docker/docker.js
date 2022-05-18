@@ -1,3 +1,20 @@
+//? you can create file  .dockerignore  and write inside it  the file you dint wont
+//? -t  ==> when you build an image and you want to give it name
+//? --name ==>when you run an image and you want to give the container name
+//! volumes
+/* 
+docker volume create <name of the volume you want>
+
+*/
+
+/* 
+! publish image to docker hub
+~ 1-docker tag redis a7medhassanmohi/redis 
+~ 2-docker login 
+~ 3-docker push a7medhassanmohi/redis
+~4- docker logout
+*/
+
 /* 
 
 ~ docker create <image name>
@@ -6,18 +23,33 @@
 
 ~ docker stop <container id>
 ~ docker kill <container id>
+.............................................. 
 
+~ docker inspect < image name> ==> information on this image
+ ~ docker stats <container id> ==> to get resource of this container take from  your computer
+ ~ docker info 
+~ docker run -d --publish 85:85 --name n1 nginx
 ~ docker run <image name in local or in docker hub>
-
+~
 ~ docker ps  ==> show running container
 ~ docker ps --all  ==> to show all container started in your machine
+~ docker container ls -a ==> to show all container in your machine
 
+~ docker images
+~ docker image rm <image name>
+
+
+
+~ docker run -d <image name> ==> to run un background
 ~ docker system prune  ==> to remove all container
-
+~ docker rm <container id> ==> to remove container
 ~ docker exec -it <container id> < command you want to execute>
 ~ docker exec -it <container id> sh
 ~ docker run -it <image id or name> sh
 
+
+
+docker inspect --format='{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <contanerid>
 
 */
 
@@ -106,5 +138,20 @@ services:
             - .:/app 
 
             
+
+*/
+
+//~................................
+
+/* 
+
+ From node:alpine as build
+ WORKDIR /app
+ COPY ./package.json ./
+ RUN npm install
+ COPY ./ ./
+ CDM ["npm","start"]
+
+ 
 
 */
